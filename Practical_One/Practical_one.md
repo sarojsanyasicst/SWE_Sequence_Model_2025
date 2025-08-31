@@ -538,11 +538,11 @@ term_freq = bow1_df.sum()
 
 **TF-IDF** addresses a key limitation of simple count vectorization by considering both term frequency (how often a word appears in a document) and inverse document frequency (how rare the word is across the entire corpus).
 
-- **Formula**: $$ {TF-IDF = TF \times IDF} $$
+- **Formula**: TF-IDF = TF \times IDF
 
 - **TF (Term Frequency)**: $$\frac {Number \ of \ times  \ word \ appears \ in document} {\ Total \ words \ in \ document}$$
 
-- **IDF (Inverse Document Frequency)**: log $$ (\frac {Total \ documents} {Documents \ containing \ the \ word})$$
+- **IDF (Inverse Document Frequency)**: log $$ \frac ({Total \ documents} {Documents \ containing \ the \ word})$$
 
 **Key Insight**: TF-IDF gives higher weights to words that are frequent in a specific document but rare across the corpus, making them more distinctive and informative.
 
