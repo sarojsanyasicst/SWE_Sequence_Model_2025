@@ -28,12 +28,22 @@ We will employ the most common and effective strategy: **Hard Parameter Sharing*
 
 **Architectural Concept:**
 
-graph TD
-A[Input Text] --> B[Shared Transformer Encoder (e.g., BERT)]
-B --> C[NER Head (Linear Layer)]
-B --> D[QA Head (Two Linear Layers)]
-C --> E[NER Output (Tags)]
-D --> F[QA Output (Start/End Span)]
+```text
+
+                                    [Input Text]
+                                          |
+                                          V
+
+                        [Shared Transformer Encoder (e.g., BERT)]
+                                          |
+                          +---------------+---------------+
+                          |                               |
+                          V                               V
+              [NER Head (Linear Layer)]       [QA Head (Two Linear Layers)]
+                          |                               |
+                          V                               V
+              [NER Output (Tags)]             [QA Output (Start/End Span)]
+```
 
 ### **1.2. The Multi-Task Loss Function**
 
