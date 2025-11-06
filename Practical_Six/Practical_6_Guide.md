@@ -3,6 +3,7 @@
 ## Transformer Architecture Implementation (PyTorch)
 
 **Course:** DAM202 [Year3-Sem1]
+
 **Focus:** Implementation of the original "Attention Is All You Need" (Vaswani et al., 2017) Transformer architecture.
 
 ---
